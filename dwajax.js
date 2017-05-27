@@ -1,6 +1,30 @@
-// DWAJAX.js, initial release
-// by 220 @ WKH, GPLv2
-	
+/*
+ * dwajax.js, r1.1
+ * by 220, GPLv3
+ * 
+ * 2-2-0.online
+ * github.com/2-2-0
+ * 
+ * Copyright 2017 220 <u220@Espartaco>
+ * 
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+ * MA 02110-1301, USA.
+ * 
+ * 
+ */
+
 // usage:
 // <div id = "div-name">original div contents</div>
 // <A HREF="javascript:;" onclick="getContent ('div-name', 'new-file.html');">Click here</A>
@@ -44,6 +68,7 @@ function fetchForm () {
 	var param_line = "";
 	
 	for (var i=0; i<arguments.length; i++) {
+		param_line+= "&";
 		param_line+= arguments [i]+"=";
 		param_line+= document.getElementById (arguments [i]).value;
 	}
